@@ -1,5 +1,6 @@
 package com.donaton.necesidadesservice.service;
 
+import com.donaton.necesidadesservice.model.Necesidad;
 import com.donaton.necesidadesservice.repository.NecesidadRepository;
 import org.springframework.stereotype.Service;
 
@@ -14,11 +15,13 @@ public class NecesidadService {
         this.repository = repository;
     }
 
-    public com.donaton.necesidades.model.Necesidad guardar(com.donaton.necesidades.model.Necesidad necesidad) {
+    public Necesidad guardar(Necesidad necesidad) {
+
         return repository.save(necesidad);
     }
 
-    public List<com.donaton.necesidades.model.Necesidad> listar() {
+    public List<Necesidad> listar() {
+
         return repository.findAll();
     }
 }

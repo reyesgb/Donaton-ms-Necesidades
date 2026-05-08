@@ -1,4 +1,4 @@
-package com.donaton.necesidades.model;
+package com.donaton.necesidadesservice.model;
 
 import jakarta.persistence.*;
 import lombok.*;
