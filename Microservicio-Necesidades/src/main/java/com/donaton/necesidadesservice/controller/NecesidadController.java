@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import com.donaton.necesidadesservice.model.Necesidad;
 
-
 @RestController
 @RequestMapping("/necesidades")
+@CrossOrigin(origins = "*")
 public class NecesidadController {
 
     private final NecesidadService service;
