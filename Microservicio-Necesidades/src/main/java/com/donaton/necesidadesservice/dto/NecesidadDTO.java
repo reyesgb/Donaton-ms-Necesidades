@@ -8,9 +8,17 @@ import lombok.Data;
 public class NecesidadDTO {
 
     @NotBlank
-    private String descripcion;
-    @Min(1)
-    private int cantidadNecesaria;
+    private String comuna;
+
     @NotBlank
-    private String ubicacion;
+    private String categoria;
+
+    @Min(1)
+    private Integer cantidadNecesaria;
+
+    @NotBlank
+    private String descripcion;
+
+    @NotBlank
+    private String prioridad;
 }

@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "necesidades")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -14,7 +13,15 @@ public class Necesidad {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String comuna;
+
+    private String categoria;
+
+    private Integer cantidadNecesaria;
+
     private String descripcion;
-    private int cantidadNecesaria;
-    private String ubicacion;
+
+    private String prioridad;
+
+    private String estado;
 }
