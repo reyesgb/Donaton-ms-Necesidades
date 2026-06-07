@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.*;
 
-
 @Configuration
 public class CorsConfig {
 
@@ -13,7 +12,8 @@ public class CorsConfig {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.addAllowedOrigin("*");
+        // Se usa Pattern en lugar de Origin para no chocar con setAllowCredentials(true)
+        configuration.addAllowedOriginPattern("*");
 
         configuration.addAllowedMethod("*");
 
