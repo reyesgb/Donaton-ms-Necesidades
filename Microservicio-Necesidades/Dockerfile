@@ -1,11 +1,9 @@
 FROM eclipse-temurin:17-jdk-alpine
 
-EXPOSE 8081
+EXPOSE 8080
 
-# Copiamos la wallet al contenedor
+COPY Wallet_donatonBD /app/wallet
 
-
-# Copiamos el .jar
 COPY target/*.jar app.jar
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
