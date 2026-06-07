@@ -24,4 +24,6 @@ public class Necesidad {
     private String prioridad;
 
     private String estado;
+
+    private String tipoEmergencia;
 }
